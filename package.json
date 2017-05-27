@@ -1,5 +1,5 @@
 {
-  "name": "Node Binder",
+  "name": "Node-Binder",
   "version": "1.0.0~pre-alpha",
   "license": "MIT",
   "scripts": {
@@ -19,7 +19,13 @@
     "@angular/platform-browser": "^4.0.0",
     "@angular/platform-browser-dynamic": "^4.0.0",
     "@angular/router": "^4.0.0",
+    "body-parser": "^1.17.2",
+    "cookie-parser": "^1.4.3",
     "core-js": "^2.4.1",
+    "express": "^4.15.3",
+    "method-override": "^2.3.9",
+    "mysql": "^2.13.0",
+    "mysql2": "^1.2.0",
     "rxjs": "^5.1.0",
     "zone.js": "^0.8.4"
   },

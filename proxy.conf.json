@@ -1,0 +1,6 @@
+{
+  "/api": {
+    "target": "http://dev.nodebinder.io:5270/api",
+    "secure": false
+  }
+}
