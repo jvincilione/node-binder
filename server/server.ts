@@ -50,9 +50,11 @@ app.use(function (req, res, next) {
 app.use(express.static(__dirname + '/../dist'));
 
 // routes ==================================================
+import { userRoutes } from './routes/user';
 import { pageRoutes } from './routes/page';
 import { staticRoutes } from './routes/static';
 
+userRoutes(app);
 pageRoutes(app);
 staticRoutes(app);
 

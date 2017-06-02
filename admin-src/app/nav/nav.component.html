@@ -1,0 +1,23 @@
+<nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
+  <a class="navbar-brand" href="#">LBC</a>
+  <div class="navbar">
+    <ul class="navbar-nav">
+      <li class="nav-item {{item.childPages.length ? 'dropdown' : ''}}" *ngFor="let item of menuItems">
+        <a class="nav-link"
+           *ngIf="item.href"
+           [attr.href]="item.href"
+           [attr.class]="item.classes">{{item.title}}</a>
+        <a class="nav-link"
+           *ngIf="!item.href"
+           [attr.class]="item.classes"
+           (click)="toggleSubnav(item.id)">{{item.title}}</a>
+        <!-- TODO: Add sub nav here -->
+        <div class="dropdown-menu visible" *ngIf="item.childPages.length" [hidden]="activeSubnavId !== item.id">
+          <a *ngFor="let page of item.childPages"
+             [attr.href]="page.href"
+             [attr.class]="page.classes + ' dropdown-item'">{{page.title}}</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>

@@ -1,5 +1,5 @@
 import { connection } from '../../database/connection';
-import { Page } from '../models/page.class';
+import { Page } from '../interfaces/page.interface';
 
 class PageService {
   getPages(callback:any) :void {

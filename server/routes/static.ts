@@ -3,12 +3,12 @@
 export function staticRoutes(app) {
   // for js files, route goes to that file
   app.get('/nb-admin/*.js', (req, res) => {
-    res.sendFile('/admin/' + req.url);
+    res.sendFile('/nb-admin/' + req.url);
   });
 
   // for css files, route goes to that file
   app.get('/nb-admin/*.css', (req, res) => {
-    res.sendFile('/admin/' + req.url);
+    res.sendFile('/nb-admin/' + req.url);
   });
 
   // for js files, route goes to that file
@@ -27,8 +27,8 @@ export function staticRoutes(app) {
   });
 
   // route to handle all angular requests
-  app.get('/nb-admin/*', (req, res) => {
-    res.sendFile('/admin/' + req.url);
+  app.get('/nb-admin/', (req, res) => {
+    res.sendFile('/nb-admin/index.html');
   });
 
 };

@@ -1,0 +1,9 @@
+<div *ngIf="page">
+  <h1 class="page-title">{{page.title}}</h1>
+  <div class="page-content">
+    <div class="hero" *ngIf="page.header">
+      <img [attr.src]="page.header" alt="">
+    </div>
+    <div class="page-content" [innerHtml]="page.content"></div>
+  </div>
+</div>

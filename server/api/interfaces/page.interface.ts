@@ -1,4 +1,4 @@
-class Page {
+interface Page {
   id:number;
   title:string;
   slug:string;
