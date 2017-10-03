@@ -1,5 +1,5 @@
-// this file should be updated to the correct values
 "use strict";
+// this file should be updated to the correct values
 exports.__esModule = true;
 exports.dbConfig = {
     dev: {

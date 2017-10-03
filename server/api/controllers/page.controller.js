@@ -4,6 +4,9 @@ exports.__esModule = true;
 var request = require('request');
 var page_service_1 = require("../services/page.service");
 var pageService = new page_service_1.PageService();
+var returnMessage = function (res, status, message) {
+    return res.status(status).send(message);
+};
 var Page = (function () {
     function Page() {
     }
@@ -16,7 +19,18 @@ var Page = (function () {
         });
     };
     Page.prototype.getPage = function (req, res) {
-        // get page from database using route ':slug'
+        var slug = req.params.slug;
+        return pageService.getPage(slug, function (error, page) {
+            if (page.length) {
+                return res.send(JSON.stringify(page[0]));
+            }
+            else if (error) {
+                return returnMessage(res, 500, error);
+            }
+            else {
+                return returnMessage(res, 404, 'Page "' + slug + '" not found.');
+            }
+        });
     };
     Page.prototype.addPage = function (req, res) {
     };

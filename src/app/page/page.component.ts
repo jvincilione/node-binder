@@ -24,7 +24,7 @@ export class PageComponent implements OnInit {
     this._route.params.subscribe(params => {
       this._pageService.getPageContent(params['slug'])
         .then((page) => {
-          this.page = new Page(page);
+          this.page = new Page(page.json());
         });
     });
   }

@@ -1,10 +1,11 @@
 {
   "name": "Node-Binder",
-  "version": "1.0.0~pre-alpha",
+  "version": "1.0.0-pre-alpha",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
     "start": "node server/server.js",
+    "devstart": "ng serve --proxy-config proxy.conf.json",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",

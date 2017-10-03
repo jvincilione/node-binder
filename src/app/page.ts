@@ -10,10 +10,10 @@ export class Page {
 
   constructor(page) {
     this.id = page.id;
-    this.slug = page.slug;
-    this.title = page.title;
-    this.content = page.content;
-    this.header = page.header;
+    this.slug = page.page_slug;
+    this.title = page.page_title;
+    this.content = page.page_content;
+    this.header = page.page_header;
   }
 
   addMedia(media): void {

@@ -7,7 +7,7 @@ class PageService {
   }
 
   getPage(slug, callback:any) :void {
-    connection.execute('SELECT * FROM `nb_pages` WHERE `slug` = ?;', [slug], callback);
+    connection.execute('SELECT * FROM `nb_pages` WHERE `page_slug` = ?;', [slug], callback);
   }
 
   createPage(page:Page, callback:any) :void {

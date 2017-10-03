@@ -8,7 +8,7 @@ var PageService = (function () {
         connection_1.connection.query('SELECT * FROM `nb_pages`', callback);
     };
     PageService.prototype.getPage = function (slug, callback) {
-        connection_1.connection.execute('SELECT * FROM `nb_pages` WHERE `slug` = ?;', [slug], callback);
+        connection_1.connection.execute('SELECT * FROM `nb_pages` WHERE `page_slug` = ?;', [slug], callback);
     };
     PageService.prototype.createPage = function (page, callback) {
         connection_1.connection.execute('INSERT INTO `nb_pages` ' +

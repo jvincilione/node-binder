@@ -1,6 +1,6 @@
 {
   "/api": {
-    "target": "http://dev.nodebinder.io:5270/api",
+    "target": "http://dev.nodebinder.io:5270/",
     "secure": false
   }
 }
